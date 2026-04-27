@@ -1,0 +1,1 @@
+Synchronus Text editor Page
