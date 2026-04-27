@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'channels',
+    'SocketServer',
 ]
+
+ASGI_APPLICATION = 'RDP.asgi.application'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -69,7 +73,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'RDP.wsgi.application'
-ASGI_APPLICATION = 'websocket_project.asgi.application'
+
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
